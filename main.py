@@ -16,11 +16,7 @@ def render(room,moves,points):
     print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
     print('\n\nYou are in the {name}'.format(name=room['name']))
     print(room['desc'])
-    if len(room['inventory']):
-        print('You see the following items:')
-        for i in room['inventory']:
-            print('\t{i}'.format(i=i))
-
+        
 def getInput(verbs):
     ''' Asks the user for input and normalizes the inputted value. Returns a list of commands '''
 
@@ -76,9 +72,8 @@ def main():
 
     # Game name, game file, starting location, winning location(s), losing location(s)
     games = [
-        (   'My Game',          'game.json',    'START',    ['END'],    [])
+        (   'Shadow King',          'shadowking.json',    'ENTRANCE',    ['END'],    [])
         ,(  'Zork I',           'zork.json',    'WHOUS',    ['NIRVA'],  [])
-        ,(  'A Nightmare',      'dream.json',    'START',   ['AWAKE'],  ['END'])
     ]
 
     # Ask the player to choose a game

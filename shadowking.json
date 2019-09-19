@@ -1,0 +1,164 @@
+{
+    "verbs": [
+      { "v": "EXITS",   "map": "EXITS" },
+      { "v": "QUIT",    "map": "QUIT"  },
+      { "v": "ENTER",    "map": "ENTER"  },
+      { "v": "LEAVE",    "map": "LEAVE"  },
+      { "v": "LEFT",    "map": "LEFT"  },
+      { "v": "RIGHT",    "map": "RIGHT"  },
+      { "v": "LEFT",    "map": "LEFT"  },
+      { "v": "FORWARD",    "map": "FORWARD"},
+      { "v": "FRONT",    "map": "FORWARD"},
+      { "v": "STAIRS",    "map": "STAIRS"},
+      { "v": "UP",    "map": "STAIRS"},
+      { "v": "YES",    "map": "YES"},
+      { "v": "NO",    "map": "NO"},
+      { "v": "FIGHT",    "map": "FIGHT"},
+      { "v": "ATTACK",    "map": "FIGHT"},
+      { "v": "JOIN",    "map": "JOIN"}
+
+
+    ],
+
+    "rooms": {
+      "ENTRANCE": {
+        "name": "Castle Entrance",
+        "desc": "You look up at the ominous stone castle. Was this a good idea?",
+        "exits": [
+          {
+            "verb": "ENTER",
+            "target": "MAINR",
+            "condition": ""
+          },
+          {
+            "verb": "LEAVE",
+            "target": "GAMEOVR",
+            "condition": ""
+          }
+        ]
+      },
+      "MAINR": {
+        "name": "Main Room",
+        "desc": "You enter the main room. There is a room in front of you, a room to your left and right, and a set of stairs.",
+        "exits": [
+          {
+            "verb": "LEFT",
+            "target": "LROOM",
+            "condition": ""
+          },
+          {
+            "verb": "RIGHT",
+            "target": "RTROOM",
+            "condition": ""
+          },
+          {
+            "verb": "STAIRS",
+            "target": "TOPRM",
+            "condition": ""
+          },{
+            "verb": "FORWARD",
+            "target": "DUNGEON",
+            "condition": ""
+          },{
+            "verb": "LEAVE",
+            "target": "GAMEOVR",
+            "condition": ""
+          }
+        ]
+      },
+      "LROOM": {
+        "name": "Left Room",
+        "desc": "You enter the left room of the castle. There is a chest full of gold and gems. Do you take from the chest?",
+        "exits": [
+          {
+            "verb": "YES",
+            "target": "END1",
+            "condition": ""
+          },
+          {
+            "verb": "NO",
+            "target": "MAINR",
+            "condition": ""
+          }
+        ]
+      },
+      "RTROOM": {
+        "name": "Right Room",
+        "desc": "You enter the right room of the castle. You see a giant Statue. Do you aproach it?",
+        "exits": [
+          {
+            "verb": "YES",
+            "target": "END2",
+            "condition": ""
+          },
+          {
+            "verb": "NO",
+            "target": "MAINR",
+            "condition": ""
+          }
+        ]
+      },
+      "TOPRM": {
+        "name": "Top Floor Room",
+        "desc": "You head up the stairs head through a door. Through the door is a large hall leading to an enormous door. You could go forward or go back downstairs",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "ENDRM",
+            "condition": ""
+          },
+          {
+            "verb": "BACK",
+            "target": "MAINR",
+            "condition": ""
+          }
+        ]
+      },
+      "ENDRM": {
+        "name": "The Shadow King's Throne Room",
+        "desc": "The Shadow King aproaches you with an offer, Join his army. You can either join, or you can fight him",
+        "exits": [
+          {
+            "verb": "FIGHT",
+            "target": "END3",
+            "condition": ""
+          },
+          {
+            "verb": "JOIN",
+            "target": "END4",
+            "condition": ""
+          }
+        ]
+      },
+      "DUNGEON": {
+        "name": "The Castle Dungeon",
+        "desc": "You enter into a dark, damp room. You soon realize that this is the castle's dungeon, but once you do it's too late. A large shadowy figure slams the door shut, trapping you inside. GAMEOVER",
+        "exits": []
+      },
+      "END1": {
+        "name": "End",
+        "desc": "You grab as much gold as you can before leaving the castle. Too bad for you, however, that the gold is cursed. Once you get back home, you turn into a golden statue. GAMEOVER",
+        "exits": []
+      },
+      "END2": {
+        "name": "End",
+        "desc": "You Examine the giant statue. As you are doing so, the giant statue starts to topple over. You don't have time to get out of the way. GAMEOVER",
+        "exits": []
+      },
+      "END3": {
+        "name": "Victory",
+        "desc": "After a long and difficult battle, you slay the Shadow King. When you head back home, people cheer for you. A grand banquet is later held in your honor. END",
+        "exits": []
+      },
+      "END4": {
+        "name": "END",
+        "desc": "The Shadow King instantly takes over your mind. You become another mindless thrall in his army. GAMEOVER",
+        "exits": []
+      },
+      "GAMEOVR": {
+        "name": "End",
+        "desc": "You decide it would be a bad idea to progress and head back home. GAMEOVER",
+        "exits": []
+      }
+    }
+  }
