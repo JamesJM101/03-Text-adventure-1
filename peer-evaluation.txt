@@ -1,0 +1,36 @@
+Name: Hua Zhao
+Date:
+ 9/28/2019
+Project: 03-Text-adventure
+Peer's repository: https://github.com/hhhzhao/03-Text-adventure-1.git 
+
+
+
+
+What is something you learned by reviewing your peer's project?
+
+ 
+
+	I noticed that my peer's '.json' file is based on the game 'zork' which professor provided to us. 
+My peer made a lot of changes into the game and made it become funnier. When the user enter in each phrase,
+it will give some instruction of what should we do next step. And the game indicate moves and points, it 
+is good as well.
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+	I will apply moves and ponits into my game. I think it will make my game more competitive. I would like to 
+add more instructions into my game as well so that user will not get confuse about the game. 
+What suggestions would you have for your peer to improve his/her code?
+	When user entered the game, I got confuse about what should I do next. I tried several times and I found out
+that when I typed 'enter'. The system will allow me to enter the game. Otherwise, the game's instruction is very well.
+Also, when the game end, it is better to exit the loop instead of keep asking user 'what would you like to do'.
+What could have been clearer or better commented?
+	It will be better to add more comment into the code so the user will suddenly understand what each line of code is doing. 
+Was there anything in the code that was confusing to you? If so, what?
+	The code is not confusing to me at all. Overall it looks nice.
+
+Does the repository contain an appropriate LICENSE?
+	Yes, it contains an appropriate LICENSE
+What is something he/she could add to the README.md to make it more descriptive?
+	For the readme.md, it is better to introduce more about the game and teach what the user should do when they open 
+the game.
+Pay a compliment to your peer based on the quality of his/her code.
+	9.6/10 because of the misunderstanding of the enter phrase and the end of the game.
